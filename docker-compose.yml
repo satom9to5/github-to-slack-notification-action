@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  node:
+    build:
+      context: ./
+    volumes:
+      - .:/actions
+    tty: true
+    command: sh -c "npm install && tail -f /dev/null"
